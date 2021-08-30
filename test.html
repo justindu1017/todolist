@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="svgDiv">
+      <svg class="ss" transform="scale(1,-1) translate(0,-200)"></svg>
+    </div>
+  </body>
+
+  <script>
+    // let data = {
+    //   1: 4,
+    //   2: 2,
+    //   3: 1,
+    // };
+    let data = [1, 2, 3, 4, 45];
+    var rheight = 35;
+
+    d3.select(".ss")
+      .attr("width", 550)
+      .attr("height", 370)
+      .append("g")
+      .selectAll("rect")
+      .data(data)
+      .enter()
+      .append("rect")
+      .attr("x", function (d, i) {
+        console.log("d = ", d);
+        // 起始點X
+        return i * rheight;
+      })
+      .attr("y", function (d, i) {
+        // 起始點Y
+        return 0;
+      })
+      .attr("height", function (d) {
+        return d;
+      })
+      .attr("width", rheight - 3)
+      .attr("fill", "tomato");
+  </script>
+</html>
