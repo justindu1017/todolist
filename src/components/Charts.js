@@ -7,6 +7,18 @@ const Charts = ({ taskLists }) => {
 
   let data = [0, 0, 0];
 
+  // another example
+  // use d.Grade to get each grade
+  // use d.count to get each count
+  // let data = [
+  //   { Grade: null, count: 494 },
+  //   { Grade: "102", count: 330 },
+  //   { Grade: "103", count: 272 },
+  //   { Grade: "104", count: 201 },
+  //   { Grade: "105", count: 289 },
+  //   { Grade: "106", count: 237 },
+  // ];
+
   taskLists.forEach((ele) => {
     data[ele.level - 1]++;
   });
@@ -21,6 +33,9 @@ const Charts = ({ taskLists }) => {
       .enter()
       .append("rect")
       .attr("x", function (d, i) {
+        // d: each item in the Array
+        // i: the index of the current item
+
         console.log("d = ", d);
         // 起始點X
         return i * rheight;
