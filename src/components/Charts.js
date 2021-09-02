@@ -23,8 +23,6 @@ const Charts = ({ taskLists }) => {
     data[ele.level - 1]++;
   });
 
-  console.log(data);
-
   const d3Fun = () => {
     d3.select(d3Chart.current)
       .append("g")
@@ -36,7 +34,6 @@ const Charts = ({ taskLists }) => {
         // d: each item in the Array
         // i: the index of the current item
 
-        console.log("d = ", d);
         // 起始點X
         return i * rheight;
       })

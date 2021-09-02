@@ -1,15 +1,11 @@
 import React from "react";
 
-const AddTaskBtn = () => {
-  const onClick = () => {
-    console.log("btn Clicked");
-  };
-
+const AddTaskBtn = ({ addModalOpen, setAddModalOpen }) => {
   return (
-    <div className="flex justify-end pr-5">
+    <div className="inline-block w-1/5">
       <button
-        onClick={onClick}
-        className="px-2 py-1 rounded-md bg-yellow-100 text-red-600 font-bold"
+        onClick={() => setAddModalOpen(!addModalOpen)}
+        className="px-2 py-1 rounded-md bg-yellow-200 text-red-600 font-bold hover:bg-yellow-100"
       >
         ADD
       </button>
