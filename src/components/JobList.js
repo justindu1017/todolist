@@ -17,11 +17,11 @@ const JobList = ({ task, delEvent }) => {
 
   return (
     <div className={styleAttr()}>
-      <div className="flex-col flex-grow-6">
+      <div className="flex-col flex-grow-6 w-6/12">
         <h1 className="text-lg">{task.title}</h1>
         <div>{task.description}</div>
       </div>
-      <div className=" flex flex-grow-1 text-5xl justify-center">
+      <div className="ml-5 flex flex-grow-1 text-5xl justify-center">
         <BiCheck
           className="rounded-lg hover:bg-purple-400 hover:shadow-lg"
           onClick={() => delEvent(task.id)}

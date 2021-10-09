@@ -65,6 +65,8 @@ function App() {
         <AddTaskModal
           addModalOpen={addModalOpen}
           setAddModalOpen={setAddModalOpen}
+          taskLists={taskLists}
+          setTaskList={setTaskList}
         />
       ) : (
         <></>
